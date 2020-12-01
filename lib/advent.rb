@@ -26,7 +26,7 @@ module Advent
       puts options[:yell] ? output.upcase : output
     end
     
-    desc "solve [DAY] [PART]", "provides the solution for aoc day and part entered"
+    desc "solve [DAY]", "provides the solution for aoc day and part entered"
     def solve(day)
       day = Day.new(day.capitalize)
       puts day.get_solution
