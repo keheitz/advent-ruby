@@ -1,14 +1,15 @@
 require_relative "one"
 require_relative "two"
 require_relative "three"
+require_relative "four"
 
 class Day
     def initialize(day_count)
         @day = day_count
 
         @specific_day = new_day(@day)
-    rescue 
-        puts "You requested a day that hasn't been solved (yet)"
+    # rescue 
+    #     puts "You requested a day that hasn't been solved (yet)"
     end
 
     def get_solution
