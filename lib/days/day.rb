@@ -5,6 +5,7 @@ require_relative "four"
 require_relative "five"
 require_relative "six"
 require_relative "seven"
+require_relative "nine"
 
 class Day
     def initialize(day_count)
