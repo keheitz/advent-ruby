@@ -1,6 +1,5 @@
 class Seven
     def initialize
-        @recurse_count = 0
         @bag_rules = []
         rule_lines = File::readlines('./lib/inputs/seven.txt').map(&:chomp)
         rule_lines.each do |rule|
@@ -28,8 +27,7 @@ class Seven
 
     def part_two
         bag_totals = count_total_required([{ :bag_desc => "shiny gold", :factor => 1, :count => 1, :level => 1}], 2)
-        puts bag_totals.map{ |t| t[:count] }.reduce(0, :+) - 1
-        345
+        bag_totals.map{ |t| t[:count] }.reduce(0, :+) - 1
     end
 
     def eventually_contains(descriptions)
@@ -48,9 +46,6 @@ class Seven
     
     # this is an insane way to do this
     # ...but it works!
-    # method iterates down through the levels from the top (shiny gold) 1 level at a time
-    # find the last level in existing level descrips
-    # and then looping all the way down to get that level's counts based on applicable rules
     # i hope to never touch this again
     def count_total_required(descriptions, level)
         starting = descriptions.count
@@ -61,7 +56,7 @@ class Seven
             new_descriptions = []
             # for that collection's bag color, get all the rules about what that bag must contain
             rules = @bag_rules.select { |r| r[:bag_desc] == desc[:bag_desc] }.map{ |r| r[:bag_contains ] }
-            # go through each rule and use the level collection above combined with the rule to describe new level
+            # go through each rule and use the -collection above combined with the rule to describe new level
             rules.each do |rule|
                 rule.each do |req|
                     new_descriptions << { 
