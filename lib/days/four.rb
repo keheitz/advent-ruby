@@ -23,30 +23,7 @@ class Four
     end
 
     def part_two
-        fields_match_data_rules(all_required_fields).select { |m| m["valid"] == true}.each do |p|
-            pp p
-            pp valid_year(p["byr"], 1920, 2002)
-            pp valid_year(p["iyr"], 2010, 2020)
-            pp valid_year(p["eyr"], 2020, 2030)
-            pp valid_height(p["hgt"])
-            pp valid_hair_color(p["hcl"])
-            pp valid_eye_color(p["ecl"])
-            pp valid_pid(p["pid"])
-        end
         fields_match_data_rules(all_required_fields).count { |p| p["valid"] == true }
-
-        all_required_fields.select do |passport|
-            hgt_cm = passport["hgt"].scan(/(\d+)cm/).flatten.first.to_i
-            hgt_in = passport["hgt"].scan(/(\d+)in/).flatten.first.to_i
-        
-            ((hgt_cm >= 150 && hgt_cm <= 193) || (hgt_in >= 59 && hgt_in <= 76)) &&
-            passport["byr"].to_i >= 1920 && passport["byr"].to_i <= 2002 &&
-            passport["iyr"].to_i >= 2010 && passport["iyr"].to_i <= 2020 &&
-            passport["eyr"].to_i >= 2020 && passport["eyr"].to_i <= 2030 &&
-            !(passport["hcl"] =~ /#[\d|a-f]{6}/).nil? &&
-            %w[amb blu brn gry grn hzl oth].include?(passport["ecl"]) &&
-            passport["pid"].length == 9
-          end.count
     end
 
     def all_required_fields
@@ -61,14 +38,6 @@ class Four
     end
 
     def check_all_rules(passport)
-        # pp valid_year(passport["byr"], 1920, 2002)
-        # pp valid_year(passport["iyr"], 2010, 2020)
-        # pp valid_year(passport["eyr"], 2020, 2030)
-        # pp valid_height(passport["hgt"])
-        # pp valid_hair_color(passport["hcl"])
-        # pp valid_eye_color(passport["ecl"])
-        # pp valid_pid(passport["pid"])
-
         valid_year(passport["byr"], 1920, 2002) &&
         valid_year(passport["iyr"], 2010, 2020) &&
         valid_year(passport["eyr"], 2020, 2030) &&
