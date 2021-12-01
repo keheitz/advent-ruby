@@ -1,4 +1,4 @@
-# Advent of Code 2020
+# Advent of Code 2020 & 2021 (ruby)
 
 Command utility to run advent of code solutions for 2020 in Ruby. Each day I plan to solve it as fast as I can using what I know and google, and then I'll try to refactor in the evening after learning from other folks solutions.
 
