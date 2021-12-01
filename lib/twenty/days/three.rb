@@ -26,7 +26,7 @@ class Three
     end
 
     def read_map_fragment
-        File::readlines('./lib/inputs/three.txt').map(&:chomp)
+        File::readlines('./lib/twenty/inputs/three.txt').map(&:chomp)
     end
 
     def parse_map(fragment)

@@ -1,7 +1,7 @@
 class Eleven
     def initialize
         @seats = []
-        File::readlines('./lib/inputs/eleven.txt').map(&:chomp).each_with_index do |line, li|
+        File::readlines('./lib/twenty/inputs/eleven.txt').map(&:chomp).each_with_index do |line, li|
             line.chars.each_with_index do |char, ci| 
                 @seats << {
                     row: li,

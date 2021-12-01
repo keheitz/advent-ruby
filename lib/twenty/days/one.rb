@@ -8,7 +8,7 @@ class One
     end
 
     def parse_inputs
-        return File::readlines('./lib/inputs/one.txt').map(&:chomp).map(&:to_i)
+        return File::readlines('./lib/twenty/inputs/one.txt').map(&:chomp).map(&:to_i)
     end
 
     def multiply_values_equaling_2020

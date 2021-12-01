@@ -14,7 +14,7 @@ class Two
     end
 
     def passwords_and_rules
-        input_lines = File::readlines('./lib/inputs/two.txt').map(&:chomp)
+        input_lines = File::readlines('./lib/twenty/inputs/two.txt').map(&:chomp)
         passwords = []
         input_lines.each do |line|
             values = line.split

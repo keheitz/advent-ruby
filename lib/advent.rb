@@ -1,5 +1,6 @@
 require "advent/version"
-require_relative "days/day"
+require_relative "twenty/days/day"
+# require_relative "twentyone/days/day"
 require "thor"
 require "pastel"
 require "terminal-table"
@@ -26,9 +27,15 @@ module Advent
       puts options[:yell] ? output.upcase : output
     end
     
-    desc "solve [DAY]", "provides the solution for aoc day and part entered"
-    def solve(day)
-      day = Day.new(day.capitalize)
+    desc "twenty_solve [DAY]", "provides the solution for aoc day in 2020 and part entered"
+    def twenty_solve(day)
+      day = Twenty::Day.new(day.capitalize)
+      puts day.get_solution
+    end
+
+    desc "twentyone_solve [DAY]", "provides the solution for aoc day in 2021 and part entered"
+    def twentyone_solve(day)
+      day = TwentyOne::Day.new(day.capitalize)
       puts day.get_solution
     end
 

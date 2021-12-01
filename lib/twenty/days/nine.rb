@@ -1,6 +1,6 @@
 class Nine
     def initialize
-        @values = File::readlines('./lib/inputs/nine.txt').map(&:chomp).map(&:to_i)
+        @values = File::readlines('./lib/twenty/inputs/nine.txt').map(&:chomp).map(&:to_i)
         @PREAMBLE_LENTH = 25
     end
     

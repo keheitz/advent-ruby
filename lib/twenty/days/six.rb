@@ -2,7 +2,7 @@ class Six
     def initialize
         @anyone_answered = []
         @everyone_answered = []
-        parsed_file = File.read('./lib/inputs/six.txt').split(/\n{2,}/)
+        parsed_file = File.read('./lib/twenty/inputs/six.txt').split(/\n{2,}/)
         parsed_file.each do |group|
             individual_answers = group.split("\n").map { |line| line.split("") }
             @anyone_answered << individual_answers.flatten.uniq

@@ -1,7 +1,7 @@
 class Seven
     def initialize
         @bag_rules = []
-        rule_lines = File::readlines('./lib/inputs/seven.txt').map(&:chomp)
+        rule_lines = File::readlines('./lib/twenty/inputs/seven.txt').map(&:chomp)
         rule_lines.each do |rule|
             bag_desc = rule.split("bags", 2).first.strip
             contains_segment = rule.split("contain", 2).last.gsub(/bags|bag/, '').delete(".").strip

@@ -1,6 +1,6 @@
 class Five
     def initialize
-        @lines = File::readlines('./lib/inputs/five.txt').map(&:chomp)
+        @lines = File::readlines('./lib/twenty/inputs/five.txt').map(&:chomp)
     end
 
     def part_one

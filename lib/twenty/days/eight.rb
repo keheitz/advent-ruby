@@ -1,6 +1,6 @@
 class Eight
     def initialize
-        input = File::readlines('./lib/inputs/eight.txt').map(&:chomp)
+        input = File::readlines('./lib/twenty/inputs/eight.txt').map(&:chomp)
         @boot_codes = input.map{ |i| { 
             :op => i.split(" ")[0],
             :arg => i.split(" ")[1].to_i

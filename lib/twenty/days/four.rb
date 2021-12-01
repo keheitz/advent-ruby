@@ -2,7 +2,7 @@ require "pp"
 
 class Four
     def initialize
-        parsed_file = File.read('./lib/inputs/four.txt').split(/\n{2,}/).map { |fields| fields.split(' ') }
+        parsed_file = File.read('./lib/twenty/inputs/four.txt').split(/\n{2,}/).map { |fields| fields.split(' ') }
         @passports = []
         parsed_file.each do |passport|
             hash = {}
