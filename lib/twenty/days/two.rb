@@ -34,7 +34,8 @@ class Two
   def validate_letter_count
     passwords_and_rules.each do |password|
       letter_count = password['string'].count(password['letter'])
-      password['valid'] = letter_count <= password['second_val'] && letter_count >= password['first_val']
+      password['valid'] =
+        letter_count <= password['second_val'] && letter_count >= password['first_val']
     end
   end
 

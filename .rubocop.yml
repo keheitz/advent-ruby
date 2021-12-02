@@ -1,0 +1,11 @@
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 99
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Metrics/MethodLength:
+  Enabled: false
