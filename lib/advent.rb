@@ -2,7 +2,7 @@
 
 require 'advent/version'
 require_relative 'twenty/days/day'
-# require_relative "twentyone/days/day"
+require_relative 'twentyone/days/day'
 require 'thor'
 require 'pastel'
 require 'terminal-table'
