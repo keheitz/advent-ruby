@@ -18,12 +18,12 @@ module Twenty
       @day = day_count
 
       @specific_day = new_day(@day)
-    rescue Exception => e
+    rescue StandardError => e
       pp e
       puts "You requested a day that hasn't been solved (yet)"
     end
 
-    def get_solution
+    def solution
       if @specific_day.nil?
         'sorry...'
       else

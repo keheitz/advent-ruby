@@ -13,7 +13,7 @@ module TwentyOne
       puts "You requested a day that hasn't been solved (yet)"
     end
 
-    def get_solution
+    def solution
       if @specific_day.nil?
         'sorry...'
       else

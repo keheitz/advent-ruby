@@ -31,13 +31,13 @@ module Advent
     desc 'solve_twenty [DAY]', 'provides the solution for aoc day in 2020 and part entered'
     def solve_twenty(day)
       day = Twenty::Day.new(day.capitalize)
-      puts day.get_solution
+      puts day.solution
     end
 
     desc 'solve_twentyone [DAY]', 'provides the solution for aoc day in 2021 and part entered'
     def solve_twentyone(day)
       day = TwentyOne::Day.new(day.capitalize)
-      puts day.get_solution
+      puts day.solution
     end
 
     # adding so I can use them when the output is a
