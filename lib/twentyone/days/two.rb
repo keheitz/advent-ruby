@@ -26,7 +26,8 @@ module TwentyOne
       depth = 0
       horizontal_distance = 0
       @submarine_commands.each do |command|
-        depth, horizontal_distance, aim = calculate_path_revised(command, depth, horizontal_distance, aim)
+        depth, horizontal_distance, aim = calculate_path_revised(command, depth,
+                                                                 horizontal_distance, aim)
       end
       multiply_final_value(depth, horizontal_distance)
     end
