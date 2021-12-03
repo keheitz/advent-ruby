@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'one'
+require_relative 'two'
 
 module TwentyOne
   class Day
