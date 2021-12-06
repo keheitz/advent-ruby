@@ -5,6 +5,7 @@ require_relative 'two'
 require_relative 'three'
 require_relative 'four'
 require_relative 'five'
+require_relative 'six'
 
 module TwentyOne
   class Day
