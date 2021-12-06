@@ -18,7 +18,7 @@ module TwentyOne
         build_gamma_and_epsilon_rates(zeroes > ones, gamma_rate, epsilon_rate)
       end
       gamma = convert_binary_to_digit(gamma_rate)
-      epsilon = convert_binary_to_digit(epsilon_rate) 
+      epsilon = convert_binary_to_digit(epsilon_rate)
       gamma * epsilon
     end
 
